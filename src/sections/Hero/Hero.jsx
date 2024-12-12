@@ -1,5 +1,5 @@
 import styles from "./HeroStyles.module.css";
-import heroImg from "../../assets/hero-img.png";
+import heroImg from "../../assets/header.png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
 import twitterLight from "../../assets/twitter-light.svg";
@@ -40,17 +40,18 @@ function Hero() {
           <br />
           Thamart
         </h1>
-        <h2>Frontend Developer</h2>
+        <h2>Developer</h2>
+
         <span>
-          <a href="https://x.com" target="_blank">
+          {/* <a href="https://x.com" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
-          </a>
+          </a> */}
           <a href="https://github.com/MadManJJ" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          {/* <a href="https://linkedin.com/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
-          </a>
+          </a> */}
         </span>
         <p className={styles.description}>
           With a passion for developing mordern React web apps for commercial

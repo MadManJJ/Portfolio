@@ -7,8 +7,62 @@
   height: 100dvh;
   min-height: 500px;
 
-  .hero {
+  .Nav {
     max-width: 250px;
+    width: 400px;
+    border: solid 2px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    h2 {
+      padding-top: 25px;
+      margin: 0;
+      text-align: center;
+    }
+
+    ul {
+      width: fit-content;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      display: block;
+
+      li {
+        margin: 10px 0;
+        line-height: 1.2;
+        padding-left: 10px;
+      }
+
+      a {
+        /* background-color: red; */
+        position: relative;
+        display: inline-block; /* Makes links block-like but still inline */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        color: var(--text-color); /* Text color for links */
+        text-align: center; /* Centers text inside the links */
+        width: fit-content; /* Makes the links span full container width */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+      }
+      a::after {
+        content: "";
+        position: absolute;
+        /*position it relative to the parent container(which is a or the one that have position relative*/
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--text-color);
+        transition: all 0.3s ease;
+      }
+      a:hover::after {
+        width: 100%;
+      }
+    }
   }
 
   span {
@@ -67,7 +121,8 @@
 
 .colorMode {
   position: absolute;
-  right: -10%;
+  top: -20%;
+  left: 100%;
   width: 50px;
   transition: all 200ms ease-in-out;
 }
@@ -93,18 +148,9 @@
     align-items: center;
     justify-content: space-evenly;
 
-    .hero {
-      max-width: 350px;
-      width: 350px;
-    }
-  }
-}
-
-@media (width >= 1400px) {
-  .container {
-    .hero {
-      max-width: 400px;
-      width: 400px;
+    .Nav {
+      max-width: 200px;
+      width: 200px;
     }
   }
 }

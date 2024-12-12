@@ -10,6 +10,7 @@ import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
+import scrollToElement from "../../common/scrollToElement";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
@@ -22,11 +23,51 @@ function Hero() {
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
-        <img
-          className={styles.hero}
-          src={heroImg}
-          alt="Profile picture of Someone"
-        />
+        <nav className={styles.Nav}>
+          <h2>Navigation</h2>
+          <ul>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("hero");
+                }}
+              >
+                Name
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("projects");
+                }}
+              >
+                Project
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("skills");
+                }}
+              >
+                Skills
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("contact");
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
         <img
           className={styles.colorMode}
           src={themeIcon}
@@ -43,15 +84,9 @@ function Hero() {
         <h2>Developer</h2>
 
         <span>
-          {/* <a href="https://x.com" target="_blank">
-            <img src={twitterIcon} alt="Twitter icon" />
-          </a> */}
           <a href="https://github.com/MadManJJ" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          {/* <a href="https://linkedin.com/" target="_blank">
-            <img src={linkedinIcon} alt="Linkedin icon" />
-          </a> */}
         </span>
         <p className={styles.description}>
           With a passion for developing mordern React web apps for commercial

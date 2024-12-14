@@ -66,6 +66,7 @@
   }
 
   span {
+    margin: 0;
     display: flex;
     gap: 25px;
     justify-content: center;
@@ -89,7 +90,6 @@
   }
 
   button {
-    margin-top: 40px;
     background-color: var(--btn-color);
     color: var(--btn-text-color);
     border: none;
@@ -133,13 +133,22 @@
 }
 
 .description {
-  max-width: 24ch;
+  max-width: 35ch;
+  margin: 10px auto;
 }
 
 .info {
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
 }
 
 @media (width >= 800px) {

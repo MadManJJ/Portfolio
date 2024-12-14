@@ -16,9 +16,7 @@ function Hero() {
   const { theme, toggleTheme } = useTheme();
 
   const themeIcon = theme === "light" ? sun : moon;
-  const twitterIcon = theme === "light" ? twitterLight : twitterDark;
   const githubIcon = theme === "light" ? githubLight : githubDark;
-  const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
 
   return (
     <section id="hero" className={styles.container}>
@@ -56,16 +54,6 @@ function Hero() {
                 Skills
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                onClick={() => {
-                  scrollToElement("contact");
-                }}
-              >
-                Contact
-              </a>
-            </li>
           </ul>
         </nav>
         <img
@@ -76,22 +64,17 @@ function Hero() {
         />
       </div>
       <div className={styles.info}>
-        <h1>
-          Pannawich
-          <br />
-          Thamart
-        </h1>
-        <h2>Developer</h2>
+        <h1>Welcome.</h1>
+        <p className={styles.description}>
+          My name is Pannawich Thamart. I’m a developer passionate about
+          creating accessible websites and applications, and I love what I do.
+        </p>
 
         <span>
           <a href="https://github.com/MadManJJ" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
         </span>
-        <p className={styles.description}>
-          With a passion for developing mordern React web apps for commercial
-          businesses.
-        </p>
         <a href={CV} target="_blank">
           <button className="hover">Resume</button>
         </a>

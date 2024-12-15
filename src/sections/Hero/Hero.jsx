@@ -11,10 +11,17 @@ import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
 import scrollToElement from "../../common/scrollToElement";
+import emailDark from "../../assets/email-dark2.png";
+import emailLight from "../../assets/email-light2.png";
+import callLight from "../../assets/call-light.png";
+import callDark from "../../assets/call-dark.png";
+import ContactBlock from "../../common/ContactBlock";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
+  const callIcon = theme === "light" ? callLight : callDark;
+  const emailIcon = theme === "light" ? emailLight : emailDark;
   const themeIcon = theme === "light" ? sun : moon;
   const githubIcon = theme === "light" ? githubLight : githubDark;
 
@@ -69,12 +76,24 @@ function Hero() {
           My name is Pannawich Thamart. I’m a developer passionate about
           creating accessible websites and applications, and I love what I do.
         </p>
-
+        {/* <div className={styles.email}>
+          <span>
+            <img src={emailIcon} alt="Email icon" />
+          </span>
+          <p> : pannawichthamart@gmail.com</p>
+        </div> */}
+        <ContactBlock
+          icon={emailIcon}
+          text=": pannawichthamart@gmail.com"
+          alt="Email icon"
+          claN={styles.contactblock}
+        />
         <span>
           <a href="https://github.com/MadManJJ" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
         </span>
+
         <a href={CV} target="_blank">
           <button className="hover">Resume</button>
         </a>

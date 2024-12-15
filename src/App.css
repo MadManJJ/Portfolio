@@ -43,7 +43,8 @@ li {
 h2,
 h3,
 p,
-li {
+li,
+span {
   font-family: "Roboto Mono", monospace;
 }
 

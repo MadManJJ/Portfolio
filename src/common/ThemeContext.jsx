@@ -7,7 +7,7 @@ export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light"
-  );
+  ); // set the first value of theme to light if there no theme in localStorage
 
   useEffect(() => {
     // run when theme is change mean it will add Attribute whenever the theme value is change
@@ -21,6 +21,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
+    // make all the children be able to use theme, toggleTheme
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>

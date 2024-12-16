@@ -33,7 +33,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+li {
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -41,7 +42,9 @@ p {
 
 h2,
 h3,
-p {
+p,
+li,
+span {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -65,10 +68,6 @@ p {
   font-weight: 300;
 }
 
-.sectionTitle {
-  margin-bottom: 30px;
-}
-
 .hover {
   cursor: pointer;
 }
@@ -90,10 +89,6 @@ p {
   p {
     font-size: 20px;
   }
-
-  .sectionTitle {
-    margin-bottom: 60px;
-  }
 }
 @media (width >= 1400px) {
   #root {
@@ -102,9 +97,5 @@ p {
 
   h1 {
     font-size: 48px;
-  }
-
-  .sectionTitle {
-    margin-bottom: 75px;
   }
 }

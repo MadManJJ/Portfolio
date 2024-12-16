@@ -11,10 +11,10 @@ import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
 import scrollToElement from "../../common/scrollToElement";
-import emailDark from "../../assets/email-dark2.png";
-import emailLight from "../../assets/email-light2.png";
-import callLight from "../../assets/call-light.png";
-import callDark from "../../assets/call-dark.png";
+import emailDark from "../../assets/email-dark3.png";
+import emailLight from "../../assets/email-light3.png";
+import callLight from "../../assets/call-light2.png";
+import callDark from "../../assets/call-dark2.png";
 import ContactBlock from "../../common/ContactBlock";
 
 function Hero() {
@@ -76,18 +76,20 @@ function Hero() {
           My name is Pannawich Thamart. I’m a developer passionate about
           creating accessible websites and applications, and I love what I do.
         </p>
-        {/* <div className={styles.email}>
-          <span>
-            <img src={emailIcon} alt="Email icon" />
-          </span>
-          <p> : pannawichthamart@gmail.com</p>
-        </div> */}
-        <ContactBlock
-          icon={emailIcon}
-          text=": pannawichthamart@gmail.com"
-          alt="Email icon"
-          claN={styles.contactblock}
-        />
+        <div className={styles.contactContainer}>
+          <ContactBlock
+            icon={emailIcon}
+            text=": pannawichthamart@gmail.com"
+            alt="Email icon"
+            claN={styles.contactblock}
+          />
+          <ContactBlock
+            icon={callIcon}
+            text=": 099-6173910"
+            alt="Call icon"
+            claN={styles.contactblock}
+          />
+        </div>
         <span>
           <a href="https://github.com/MadManJJ" target="_blank">
             <img src={githubIcon} alt="Github icon" />

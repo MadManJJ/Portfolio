@@ -1,4 +1,5 @@
 .container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,6 +126,21 @@
   left: 100%;
   width: 50px;
   transition: all 200ms ease-in-out;
+}
+
+@media (width <= 800px) {
+  .colorMode {
+    top: 0%;
+  }
+  .colorModeContainer {
+    margin-top: 150px;
+  }
+}
+
+@media (height <= 700px) {
+  .container {
+    margin: 100px 0 150px 0;
+  }
 }
 
 .colorMode:hover {

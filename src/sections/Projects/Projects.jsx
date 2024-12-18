@@ -16,25 +16,28 @@ function Projects() {
           src={viberr}
           link="https://nodejs-blog-qbtg.onrender.com"
           h3="Blog Post"
-          p="A Website that let you share your post with other (Learn Express.js and how to connect with MongoDB  "
+          p1="A Website that let you share your post with other"
+          p2="Learn Express.js and how to connect with MongoDB"
         />
         <ProjectCard
           src={freshBurger}
           link="https://github.com/MadManJJ"
           h3="Fresh Burger"
-          p="Hamburger"
+          p1="Hamburger"
         />
         <ProjectCard
           src={viberr}
-          link="https://github.com/MadManJJ"
-          h3="Viberr"
-          p="Streaming App"
+          link="https://madmanjj.github.io/LearnHTML-CSS/"
+          h3="Advertise Website"
+          p1="A dummy website that I learn HTML, CSS"
+          p2="Learn HTML and CSS"
         />
         <ProjectCard
           src={viberr}
-          link="https://github.com/MadManJJ"
-          h3="Viberr"
-          p="Streaming App"
+          link="https://webapp-t0jw.onrender.com"
+          h3="Exam Website"
+          p1="A webAplication that let you browse previous year exam TGAT , ALEVEL ,... and also include a Quiz."
+          p2="Learn some Flask using python"
         />
       </div>
     </section>

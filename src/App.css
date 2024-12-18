@@ -8,6 +8,7 @@
   --foter-text-color: #888;
   --hover-color1: #d7dbd8;
   --hover-color2: #e3e8e5;
+  --hg-color: #0987f2;
 }
 [data-theme="dark"] {
   --background-color: #222;
@@ -19,6 +20,7 @@
   --footer-text-color: #bbb;
   --hover-color1: #363639;
   --hover-color2: #403f3f;
+  --hg-color: #f0bb78;
 }
 
 ::selection {
@@ -75,6 +77,15 @@ h1 {
 p {
   font-size: 16px;
   font-weight: 300;
+}
+
+strong {
+  color: var(--hg-color);
+}
+
+.bold {
+  font-weight: 600;
+  color: var(--hg-color);
 }
 
 .hover {

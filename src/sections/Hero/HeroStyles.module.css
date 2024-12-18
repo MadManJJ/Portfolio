@@ -134,7 +134,8 @@
 
 .description {
   max-width: 35ch;
-  margin: 10px auto;
+  font-size: 16px;
+  margin: 10px auto 0px auto;
 }
 
 .info {
@@ -147,7 +148,7 @@
     text-align: center;
   }
   p {
-    text-align: center;
+    text-align: start;
   }
 }
 

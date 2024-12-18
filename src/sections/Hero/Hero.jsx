@@ -73,8 +73,16 @@ function Hero() {
       <div className={styles.info}>
         <h1>Welcome.</h1>
         <p className={styles.description}>
-          My name is Pannawich Thamart. I’m a developer passionate about
-          creating accessible websites and applications, and I love what I do.
+          My name is <strong>Pannawich Thamart</strong>. I’m a developer
+          passionate about creating accessible websites and applications, and I
+          love what I do.
+        </p>
+        <p className={styles.description}>
+          Currently, I'm studying at Chulalongkorn University,
+        </p>
+        <p className={styles.description}>
+          In my spare time, I’m usually watching movies or series, reading a
+          fantasy or scifi book.
         </p>
         <div className={styles.contactContainer}>
           <ContactBlock

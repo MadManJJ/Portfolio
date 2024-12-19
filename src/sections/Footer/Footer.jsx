@@ -1,11 +1,13 @@
-import styles from './FooterStyles.module.css';
+import styles from "./FooterStyles.module.css";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <section id="footer" className={styles.container}>
       <p>
-        &copy; 2024 Harris johnsen. <br />
-        All rights reserved.
+        &copy; {currentYear} Pannawich Thamart.
+        <br />
+        All right reserved
       </p>
     </section>
   );

@@ -1,32 +1,68 @@
-import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/Design uten navn.png';
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
-import twitterLight from '../../assets/twitter-light.svg';
-import twitterDark from '../../assets/twitter-dark.svg';
-import githubLight from '../../assets/github-light.svg';
-import githubDark from '../../assets/github-dark.svg';
-import linkedinLight from '../../assets/linkedin-light.svg';
-import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/cv.pdf';
-import { useTheme } from '../../common/ThemeContext';
+import styles from "./HeroStyles.module.css";
+import heroImg from "../../assets/header.png";
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
+import twitterLight from "../../assets/twitter-light.svg";
+import twitterDark from "../../assets/twitter-dark.svg";
+import githubLight from "../../assets/github-light.svg";
+import githubDark from "../../assets/github-dark.svg";
+import linkedinLight from "../../assets/linkedin-light.svg";
+import linkedinDark from "../../assets/linkedin-dark.svg";
+import CV from "../../assets/cv.pdf";
+import { useTheme } from "../../common/ThemeContext";
+import scrollToElement from "../../common/scrollToElement";
+import emailDark from "../../assets/email-dark3.png";
+import emailLight from "../../assets/email-light3.png";
+import callLight from "../../assets/call-light2.png";
+import callDark from "../../assets/call-dark2.png";
+import ContactBlock from "../../common/ContactBlock";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
-  const themeIcon = theme === 'light' ? sun : moon;
-  const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
-  const githubIcon = theme === 'light' ? githubLight : githubDark;
-  const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const callIcon = theme === "light" ? callLight : callDark;
+  const emailIcon = theme === "light" ? emailLight : emailDark;
+  const themeIcon = theme === "light" ? sun : moon;
+  const githubIcon = theme === "light" ? githubLight : githubDark;
 
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
-        <img
-          src={heroImg}
-          className={styles.hero}
-          alt="Profile picture of Harris Johnsen"
-        />
+        <nav className={styles.Nav}>
+          <h2>Navigation</h2>
+          <ul>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("hero");
+                }}
+              >
+                Name
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("projects");
+                }}
+              >
+                Project
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={() => {
+                  scrollToElement("skills");
+                }}
+              >
+                Skills
+              </a>
+            </li>
+          </ul>
+        </nav>
         <img
           className={styles.colorMode}
           src={themeIcon}
@@ -35,28 +71,40 @@ function Hero() {
         />
       </div>
       <div className={styles.info}>
-        <h1>
-          Harris
-          <br />
-          Johnsen
-        </h1>
-        <h2>Frontend Developer</h2>
+        <h1>Welcome.</h1>
+        <p className={styles.description}>
+          My name is <strong>Pannawich Thamart</strong>. I’m a developer
+          passionate about creating accessible websites and applications, and I
+          love what I do.
+        </p>
+        <p className={styles.description}>
+          Currently, I'm studying at Chulalongkorn University,
+        </p>
+        <p className={styles.description}>
+          In my spare time, I’m usually watching movies or series, reading a
+          fantasy or scifi book.
+        </p>
+        <div className={styles.contactContainer}>
+          <ContactBlock
+            icon={emailIcon}
+            text=": pannawichthamart@gmail.com"
+            alt="Email icon"
+            claN={styles.contactblock}
+          />
+          <ContactBlock
+            icon={callIcon}
+            text=": 099-6173910"
+            alt="Call icon"
+            claN={styles.contactblock}
+          />
+        </div>
         <span>
-          <a href="https://twitter.com/" target="_blank">
-            <img src={twitterIcon} alt="Twitter icon" />
-          </a>
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/MadManJJ" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
-            <img src={linkedinIcon} alt="Linkedin icon" />
-          </a>
         </span>
-        <p className={styles.description}>
-          With a passion for developing modern React web apps for commercial
-          businesses.
-        </p>
-        <a href={CV} download>
+
+        <a href={CV} target="_blank">
           <button className="hover">Resume</button>
         </a>
       </div>

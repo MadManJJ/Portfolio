@@ -1,4 +1,5 @@
 .container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,11 +8,66 @@
   height: 100dvh;
   min-height: 500px;
 
-  .hero {
-    max-width: 200px;
+  .Nav {
+    max-width: 250px;
+    width: 400px;
+    border: solid 2px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    h2 {
+      padding-top: 25px;
+      margin: 0;
+      text-align: center;
+    }
+
+    ul {
+      width: fit-content;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      display: block;
+
+      li {
+        margin: 10px 0;
+        line-height: 1.2;
+        padding-left: 10px;
+      }
+
+      a {
+        /* background-color: red; */
+        position: relative;
+        display: inline-block; /* Makes links block-like but still inline */
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        color: var(--text-color); /* Text color for links */
+        text-align: center; /* Centers text inside the links */
+        width: fit-content; /* Makes the links span full container width */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+      }
+      a::after {
+        content: "";
+        position: absolute;
+        /*position it relative to the parent container(which is a or the one that have position relative*/
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--text-color);
+        transition: all 0.3s ease;
+      }
+      a:hover::after {
+        width: 100%;
+      }
+    }
   }
 
   span {
+    margin: 0;
     display: flex;
     gap: 25px;
     justify-content: center;
@@ -20,7 +76,11 @@
       margin: 0;
 
       img {
-        width: 30px;
+        width: 70px;
+        transition: 200ms ease-in-out;
+      }
+      img:hover {
+        transform: scale(1.2);
       }
     }
   }
@@ -34,16 +94,19 @@
     background-color: var(--btn-color);
     color: var(--btn-text-color);
     border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 20px;
+    border-radius: 35px;
+    width: 225px;
+    height: 75px;
+    font-size: 30px;
     font-weight: bold;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+    transition: all 200ms ease;
   }
 
   button:hover {
+    border: 1px solid var(--btn-color);
+    background-color: var(--btn-text-color);
+    color: var(--btn-color);
     transform: scale(1.05);
   }
 
@@ -59,22 +122,50 @@
 
 .colorMode {
   position: absolute;
-  right: 0;
-  width: 25px;
+  top: -20%;
+  left: 100%;
+  width: 50px;
+  transition: all 200ms ease-in-out;
+}
+
+@media (width <= 800px) {
+  .colorMode {
+    top: 0%;
+  }
+  .colorModeContainer {
+    margin-top: 150px;
+  }
+}
+
+@media (height <= 700px) {
+  .container {
+    margin: 100px 0 150px 0;
+  }
 }
 
 .colorMode:hover {
   cursor: pointer;
+  transform: scale(1.2) rotate(-30deg);
 }
 
 .description {
-  max-width: 24ch;
+  max-width: 35ch;
+  font-size: 16px;
+  margin: 10px auto 0px auto;
 }
 
 .info {
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: start;
+  }
 }
 
 @media (width >= 800px) {
@@ -83,18 +174,28 @@
     align-items: center;
     justify-content: space-evenly;
 
-    .hero {
-      max-width: 350px;
-      width: 350px;
+    .Nav {
+      max-width: 200px;
+      width: 200px;
     }
   }
 }
 
-@media (width >= 1400px) {
-  .container {
-    .hero {
-      max-width: 400px;
-      width: 400px;
-    }
+.contactblock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: blue;
   }
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }

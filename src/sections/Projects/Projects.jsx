@@ -1,38 +1,43 @@
-import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
-import ProjectCard from '../../common/ProjectCard';
+import styles from "./ProjectsStyles.module.css";
+import viberr from "../../assets/viberr.png";
+import freshBurger from "../../assets/fresh-burger.png";
+import ProjectCard from "../../common/ProjectCard";
 
 function Projects() {
   return (
     <section id="projects" className={styles.container}>
-      <h1 className="sectionTitle">Projects</h1>
-      <div className={styles.projectsContainer}>
+      <h1 className="sectionTitle projectTitle">Projects</h1>
+      <p>
+        Some projects are still a work in progress and may take a while to load.
+        Thank you for your patience!
+      </p>
+      <div className={styles.projectContainer}>
         <ProjectCard
           src={viberr}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Viberr"
-          p="Streaming App"
+          link="https://nodejs-blog-qbtg.onrender.com"
+          h3="Blog Post"
+          p1="A Website that let you share your post with other"
+          p2="Learn Express.js and how to connect with MongoDB"
         />
         <ProjectCard
           src={freshBurger}
-          link="https://github.com/Ade-mir/company-landing-page-2"
+          link="https://github.com/MadManJJ"
           h3="Fresh Burger"
-          p="Hamburger Restaurant"
+          p1="Hamburger"
         />
         <ProjectCard
-          src={hipsster}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Hipsster"
-          p="Glasses Shop"
+          src={viberr}
+          link="https://madmanjj.github.io/LearnHTML-CSS/"
+          h3="Advertise Website"
+          p1="A dummy website that I learn HTML, CSS"
+          p2="Learn HTML and CSS"
         />
         <ProjectCard
-          src={fitLift}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="FitLift"
-          p="Fitness App"
+          src={viberr}
+          link="https://webapp-t0jw.onrender.com"
+          h3="Exam Website"
+          p1="A webAplication that let you browse previous year exam TGAT , ALEVEL ,... and also include a Quiz."
+          p2="Learn some Flask using python"
         />
       </div>
     </section>

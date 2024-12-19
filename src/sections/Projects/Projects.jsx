@@ -11,6 +11,10 @@ function Projects() {
         Some projects are still a work in progress and may take a while to load.
         Thank you for your patience!
       </p>
+      <span className={styles.warning}>
+        Apologize for the delay; the Blog Post and Exam Website may take over 50
+        seconds to load initially. Thank you for your patience!
+      </span>
       <div className={styles.projectContainer}>
         <ProjectCard
           src={viberr}

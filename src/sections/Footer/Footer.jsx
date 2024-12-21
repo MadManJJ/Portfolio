@@ -7,7 +7,7 @@ function Footer() {
       <p>
         &copy; {currentYear} Pannawich Thamart.
         <br />
-        All right reserved
+        This website was made with Vite and React.
       </p>
     </section>
   );

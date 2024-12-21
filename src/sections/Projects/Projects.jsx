@@ -9,7 +9,6 @@ function Projects() {
       <h1 className="sectionTitle projectTitle">Projects</h1>
       <p>
         Some projects are still a work in progress and may take a while to load.
-        Thank you for your patience!
       </p>
       <span className={styles.warning}>
         Apologize for the delay; the Blog Post and Exam Website may take over 50

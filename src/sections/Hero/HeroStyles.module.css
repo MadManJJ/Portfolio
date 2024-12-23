@@ -182,6 +182,10 @@
       width: 200px;
     }
   }
+
+  .contactContainer {
+    align-items: flex-start;
+  }
 }
 
 .contactblock {
@@ -199,7 +203,7 @@
 .contactContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: 10px;
 }
 

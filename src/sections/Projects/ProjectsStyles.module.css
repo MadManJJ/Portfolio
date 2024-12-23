@@ -11,7 +11,7 @@
   }
 
   p {
-    width: 30ch;
+    max-width: 30ch;
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -56,7 +56,7 @@
 
   p {
     margin-top: 30px;
-    width: 25ch;
+    max-width: 25ch;
   }
 }
 
@@ -75,7 +75,7 @@
 
 .warning {
   margin: 0 auto 40px auto;
-  width: 50ch;
+  max-width: 50ch;
   color: var(--hg-color);
   /* background-color: red; */
 }

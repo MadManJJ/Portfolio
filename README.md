@@ -9,4 +9,4 @@ Welcome to my portfolio project! This repository showcases my work, skills, and 
   
 Thank you for visiting my portfolio. I look forward to connecting!
 
-![image alt](https://github.com/MadManJJ/Portfolio/blob/cf3073905109ece8e10ffff337879e79ac1af2f8/port2.png)
+![image alt](https://github.com/MadManJJ/Portfolio/blob/8ebdddef55aa43cac89eaf68a7ca6f3d8515a151/port2%20(1).png)

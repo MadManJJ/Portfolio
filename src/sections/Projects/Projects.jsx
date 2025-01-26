@@ -16,7 +16,6 @@ function Projects() {
       </span>
       <div className={styles.projectContainer}>
         <ProjectCard
-          src={viberr}
           link="https://nodejs-blog-qbtg.onrender.com"
           h3="Blog Post"
           p1="A website that allows you to share your posts with others"
@@ -24,18 +23,22 @@ function Projects() {
         />
 
         <ProjectCard
-          src={viberr}
           link="https://madmanjj.github.io/LearnHTML-CSS/"
           h3="Advertise Website"
           p1="A dummy website for practicing HTML and CSS"
           p2="Learn HTML and CSS"
         />
         <ProjectCard
-          src={viberr}
           link="https://webapp-t0jw.onrender.com"
           h3="Exam Website"
           p1="A web application that allows you to browse previous years' TGAT, A-LEVEL, and other exams, and also includes a quiz feature"
           p2="Learn some Flask using python and learn some skills in JavaScript"
+        />
+        <ProjectCard
+          link="https://ubefit.netlify.app/"
+          h3="Workout Tracker"
+          p1="A full-stack web app featuring secure user authentication, workout logging with database storage, and a dynamic ranking system."
+          p2="Learn how to make a basic MERN stack"
         />
       </div>
     </section>

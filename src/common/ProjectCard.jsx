@@ -1,4 +1,4 @@
-function ProjectCard({ src, link, h3, p1, p2 }) {
+function ProjectCard({ link, h3, p1, p2 }) {
   return (
     <a href={link} target="_blank">
       <section>
